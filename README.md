@@ -1,1 +1,2 @@
-# dotfiles for a standard arch based distro
+# my dotfiles
+managed with stow
