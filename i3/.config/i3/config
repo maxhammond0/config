@@ -146,3 +146,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
+# reload wallpaper
+exec always nitrogen --restore
