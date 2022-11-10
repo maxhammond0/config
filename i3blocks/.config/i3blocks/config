@@ -20,5 +20,5 @@ interval=repeat
 signal=1
 
 [TIME_DATE]
-command=echo " $(date '+%Y %b %d %I:%M%p') "
+command=echo " $(date '+%Y %b %d %I:%M %p') "
 interval=1
