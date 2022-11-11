@@ -10,14 +10,12 @@ interval=3
 [CPU]
 full_text= CPU:  0.00% @ +00.0°C 
 command=~/.config/i3blocks/scripts/cpu.sh
-interval=repeat
+interval=1
 color=#00B4EB
 
 [SOUND]
-full_text= 🔇:  0% 
 command=~/.config/i3blocks/scripts/volume.sh
-interval=repeat
-signal=1
+interval=1
 
 [TIME_DATE]
 command=echo " $(date '+%Y %b %d %I:%M %p') "

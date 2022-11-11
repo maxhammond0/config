@@ -14,3 +14,5 @@ alias tn="tmux new -s"
 
 fish_vi_key_bindings
 
+# PATH
+set PATH ~/Scripts/ $PATH

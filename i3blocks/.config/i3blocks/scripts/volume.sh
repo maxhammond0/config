@@ -1,14 +1,4 @@
 #!/bin/bash
-
-# change volume on interaction
-if [[ $BLOCK_BUTTON -eq 2 ]]; then
-    amixer -q sset Master toggle
-elif [[ $BLOCK_BUTTON -eq 4 ]]; then # volume up when scrolling up
-    amixer -q sset Master 2%+
-elif [[ $BLOCK_BUTTON -eq 5 ]]; then # volume down when scrolling down
-    amixer -q sset Master 2%-
-fi
-
 # get output from amixer
 AMIXER=$(amixer get Master | tail -n 1) # get last line of amixer output
 
@@ -19,8 +9,6 @@ if [[ $AMIXER =~ "[on]" ]]; then # check if channel is muted by checking if line
     VOL="${args[4]:1:-1}" # get 4th argument (the volume) from the string we just split and remove the first and last argument (square brackets)
     
     echo " 🔊 $VOL "
-    echo " 🔊 $VOL "
 else
-    echo " 🔇  0% "
     echo " 🔇  0% "
 fi
