@@ -92,6 +92,8 @@ bindsym $mod+Shift+k move up
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 
+bindsym $mod+m exec --no-startup-id spotify-launcher
+
 # ARROW KEYS
 bindsym $mod+Left focus left
 bindsym $mod+Shift+Left move left
