@@ -18,5 +18,5 @@ command=~/.config/i3blocks/scripts/volume.sh
 interval=1
 
 [TIME_DATE]
-command=echo " $(date '+%Y %b %d %I:%M %p') "
+command=echo " $(date '+%a %d %b %I:%M%P') "
 interval=1
