@@ -76,10 +76,13 @@ bindsym $mod+w exec --no-startup-id $BROWSER
 
 bindsym $mod+r exec $term -e lf
 
+bindsym $mod+y layout stacking
 bindsym $mod+Shift+y resize shrink width 10 px or 10 ppt
 
+bindsym $mod+u layout tabbed
 bindsym $mod+Shift+u resize grow height 10 px or 10 ppt
 
+bindsym $mod+i layout toggle split
 bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
@@ -119,9 +122,6 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Right focus right
 bindsym $mod+Shift+Right move right
 
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle

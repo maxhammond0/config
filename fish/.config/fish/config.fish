@@ -11,7 +11,6 @@ alias tk="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 
-
 fish_vi_key_bindings
 
 # PATH
