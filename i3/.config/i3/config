@@ -21,9 +21,9 @@ bar {
 	position top
 }
 
-# Lock screen
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-set $Locker i3lock -i /home/max/.config/i3/lockscreen.png && sleep 1
+# POWER MANAGEMENT
+set $Locker i3lock-fancy
+exec xautolock -time 5 -locker '&& i3lock-fancy -p' -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -49,7 +49,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 
-# F KEYS
+# F KEY ALTERNATIVES
 bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -57,7 +57,7 @@ bindsym $mod+F5 exec --no-startup-id brightnessctl set 10%-
 bindsym $mod+F6 exec --no-startup-id brightnessctl set +10%
 
 
-# Screenshots
+# SCREENSHOT
 # bindsym $mod+F12 exec scrot /home/max/Pictures/screenshots/$(date) 
 # bindsym $mod+Shift+F12 exec scrot -s /home/max/Pictures/screenshots/$(date)
 bindsym --release $mod+p exec scrot /home/max/Pictures/screenshots/"screenshot-$(date +%s)"
