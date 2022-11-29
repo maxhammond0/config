@@ -6,7 +6,7 @@ gaps outer 10
 # variables
 set $mod Mod4
 set $term alacritty
-
+set $browser firefox
 
 # On startup
 # exec_always --no-startup-id feh --bg-scale ~/.config/i3/wall
@@ -21,9 +21,9 @@ bar {
 	position top
 }
 
-set $Locker i3lock -i /home/max/.config/i3/lockscreen.png && sleep 1
-
+# Lock screen
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+set $Locker i3lock -i /home/max/.config/i3/lockscreen.png && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
