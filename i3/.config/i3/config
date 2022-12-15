@@ -14,9 +14,11 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id picom
+exec --no-startup-id redshift -l 33.8688:151.2093
+exec --no-startup-id dunst
 
 bar {
-	font pango:mono 11
+	font pango:mono 13
 	status_command i3blocks
 	position top
 }
@@ -60,8 +62,8 @@ bindsym $mod+F6 exec --no-startup-id brightnessctl set +10%
 # SCREENSHOT
 # bindsym $mod+F12 exec scrot /home/max/Pictures/screenshots/$(date) 
 # bindsym $mod+Shift+F12 exec scrot -s /home/max/Pictures/screenshots/$(date)
-bindsym --release $mod+p exec scrot /home/max/Pictures/screenshots/"screenshot-$(date +%s)"
-bindsym --release $mod+Shift+p exec scrot -s /home/max/Pictures/screenshots/"screenshot-$(date +%s)"
+bindsym --release $mod+p exec scrot /home/max/Pictures/screenshots/"screenshot-$(date +%s).png"
+bindsym --release $mod+Shift+p exec scrot -s /home/max/Pictures/screenshots/"screenshot-$(date +%s).png"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
