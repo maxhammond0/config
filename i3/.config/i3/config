@@ -16,6 +16,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id picom
 exec --no-startup-id redshift -l 33.8688:151.2093
 exec --no-startup-id dunst
+exec --no-startup-id unclutter
 
 bar {
 	font pango:mono 13

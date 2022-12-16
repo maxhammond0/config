@@ -127,7 +127,7 @@ lfcd () {
 }
 bindkey -s '^o' '^ulfcd\n'
 
-bindkey -s '^a' '^ubc -lq\n'
+bindkey -s '^b' '^ubc -lq\n'
 
 bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
 
@@ -149,3 +149,6 @@ alias tn="tmux new -s"
 #[ -f "/home/max/.ghcup/env" ] && source "/home/max/.ghcup/env" # ghcup-env
 
 [ -f "/home/max/.ghcup/env" ] && source "/home/max/.ghcup/env" # ghcup-env
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
