@@ -1,5 +1,6 @@
 # path
-export PATH=$HOME/bin:$HOME/Scripts:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.cargo/bin/:$HOME/.local/bin/:$HOME/.ghcup/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/Scripts:$HOME/.cargo/bin/:$HOME/.local/bin/:$HOME/.ghcup/bin:/usr/local/bin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -134,7 +135,7 @@ bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
 bindkey '^[[P' delete-char
 
 # aliases
-alias vim="lvim"
+alias vim="nvim"
 
 # tmux aliases
 alias ta="tmux attach-session -t"
@@ -151,4 +152,6 @@ alias tn="tmux new -s"
 [ -f "/home/max/.ghcup/env" ] && source "/home/max/.ghcup/env" # ghcup-env
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+
+# opam configuration
+[[ ! -r /home/max/.opam/opam-init/init.zsh ]] || source /home/max/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
