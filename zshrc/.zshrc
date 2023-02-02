@@ -1,7 +1,11 @@
 # path
-export PATH=$HOME/bin:$HOME/Scripts:$HOME/.cargo/bin/:$HOME/.local/bin/:$HOME/.ghcup/bin:/usr/local/bin:$PATH
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:$HOME/.emacs.d/bin"
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/Scripts
+export PATH=$PATH:$HOME/.cargo/bin/
+export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:$HOME/.ghcup/bin
+export PATH=$PATH:$HOME/usr/local/bin
+export PATH=$PATH:$HOME/.rvm/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
