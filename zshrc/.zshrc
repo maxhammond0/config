@@ -148,15 +148,12 @@ alias tk="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 
-#[ -f "/home/max/.ghcup/env" ] && source "/home/max/.ghcup/env" # ghcup-env
-
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
-
-#[ -f "/home/max/.ghcup/env" ] && source "/home/max/.ghcup/env" # ghcup-env
 
 [ -f "/home/max/.ghcup/env" ] && source "/home/max/.ghcup/env" # ghcup-env
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-
 # opam configuration
 [[ ! -r /home/max/.opam/opam-init/init.zsh ]] || source /home/max/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# Ruby version manager
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
