@@ -144,6 +144,10 @@ bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 
 bindsym $mod+m exec --no-startup-id spotify-launcher
+bindsym $mod+greater exec --no-startup-id playerctl -p spotify next
+bindsym $mod+less exec --no-startup-id playerctl -p spotify previous
+bindsym $mod+slash exec --no-startup-id playerctl -p spotify pause
+bindsym $mod+Shift+question exec --no-startup-id playerctl -p spotify play
 
 # ARROW KEYS
 bindsym $mod+Left focus left
