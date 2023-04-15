@@ -1,2 +1,1 @@
-# my dotfiles
-managed with stow
+## dotfiles
