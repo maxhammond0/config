@@ -157,3 +157,4 @@ alias tn="tmux new -s"
 
 # Ruby version manager
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
