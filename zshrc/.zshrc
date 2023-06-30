@@ -1,11 +1,15 @@
 # path
+export PATH=$HOME/.ghcup/bin:$PATH
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/Scripts
 export PATH=$PATH:$HOME/.cargo/bin/
 export PATH=$PATH:$HOME/.local/bin/
-export PATH=$PATH:$HOME/.ghcup/bin
-export PATH=$PATH:$HOME/usr/local/bin
 export PATH=$PATH:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/usr/local/bin
+
+export TERM=alacritty
+export EDITOR=nvim
+export BROWSER=firefox
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

@@ -1,7 +1,7 @@
 # BASIC DEFINITIONS
 for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 10
+gaps inner 2
+gaps outer 2
 
 # variables
 set $mod Mod4
@@ -22,6 +22,7 @@ exec --no-startup-id unclutter
 
 # Colors
 
+# set primary gruvbox colorscheme colors
 set $bg #282828
 set $red #cc241d
 set $green #98971a
@@ -31,7 +32,6 @@ set $purple #b16286
 set $aqua #689d68
 set $gray #a89984
 set $darkgray #1d2021
-set $lightgray #bdae93
 
 bar {
     font pango:mono 13
@@ -51,11 +51,20 @@ bar {
     }
 }
 
+
+# green gruvbox
 # class                 border|backgr|text|indicator|child_border
-client.focused          $lightgray $lightgray $bg $purple $darkgray
-client.focused_inactive $darkgray $darkgray $lightgray $purple $darkgray
-client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
-client.urgent           $red $red $white $red $red
+#client.focused          $green $green $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+# client.urgent           $red $red $white $red $red
 
 # POWER MANAGEMENT
 set $Locker i3lock-fancy
@@ -74,8 +83,17 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
 bindsym $mod+Shift+Delete mode "$mode_system"
+
+set $mode_screen_layout Select monitor setup (d) double, (s) single
+mode "$mode_screen_layout" {
+    bindsym d exec --no-startup-id ~/.screenlayout/horvert.sh && nitrogen --restore, mode "default"
+    bindsym s exec --no-startup-id ~/.screenlayout/layout.sh && nitrogen --restore, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+m mode "$mode_screen_layout"
 
 # SPECIAL KEYS
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
