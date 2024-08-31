@@ -1,11 +1,12 @@
-# path
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=$HOME/.ghcup/bin:$PATH
-export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/Scripts
-export PATH=$PATH:$HOME/.cargo/bin/
-export PATH=$PATH:$HOME/.local/bin/
-export PATH=$PATH:$HOME/.rvm/bin
-export PATH=$PATH:$HOME/usr/local/bin
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/Scripts:$PATH
+export PATH=$HOME/.cargo/bin:/$PATH
+export PATH=$HOME/.local/bin:/$PATH
+export PATH=$HOME/.rvm/bin:$PATH
+export PATH=$HOME/usr/local/bin:$PATH
 
 export TERM=alacritty
 export EDITOR=nvim
@@ -152,6 +153,9 @@ alias tk="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 
+# tmp database
+alias db='psql -U "y23s2i2120_mham5835" -h soitpw11d59.shared.sydney.edu.au -d "y23s2i2120_mham5835"'
+
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
 
 [ -f "/home/max/.ghcup/env" ] && source "/home/max/.ghcup/env" # ghcup-env
@@ -160,5 +164,3 @@ alias tn="tmux new -s"
 [[ ! -r /home/max/.opam/opam-init/init.zsh ]] || source /home/max/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # Ruby version manager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
