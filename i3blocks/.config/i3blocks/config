@@ -1,17 +1,39 @@
+[BATTERY]
+command=~/.config/i3blocks/scripts/battery.sh
+interval=3
+
+[arch-update]
+command=~/.config/i3blocks/scripts/arch-update.sh
+interval=3600
+markup=pango
+LABEL=Updates:
+
+[aur-update]
+command=~/.config/i3blocks/scripts/aur-update.sh
+markup=pango
+format=json
+interval=43200
+UPDATE_COLOR=red
+QUIET=1
+IGNORE=root vidyodesktop
+#CACHE_UPDATES=0
+#FORCE_IPV4=1
+
 [DISK]
 command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $4, $2) }'
 interval=2
 color=#C9E3DB
 
-[BATTERY]
-command=~/.config/i3blocks/scripts/battery.sh
-interval=3
-
 [CPU]
 full_text= CPU:  0.00% @ +00.0°C 
 command=~/.config/i3blocks/scripts/cpu.sh
 interval=1
-color=#00B4EB
+# color=#00B4EB
+
+[MEMORY]
+command=~/.config/i3blocks/scripts/memory.sh
+label=MEM
+interval=30
 
 [SOUND]
 command=~/.config/i3blocks/scripts/volume.sh
