@@ -69,6 +69,7 @@ client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 # POWER MANAGEMENT
 set $Locker i3lock-fancy
 exec --no-startup-id xautolock -time 5 -locker '&& i3lock-fancy -p' -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $Locker --nofork
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -99,6 +100,7 @@ bindsym $mod+Shift+m mode "$mode_screen_layout"
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+

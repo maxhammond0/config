@@ -22,7 +22,7 @@ IGNORE=root vidyodesktop
 [DISK]
 command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $4, $2) }'
 interval=2
-color=#C9E3DB
+# color=#C9E3DB
 
 [CPU]
 full_text= CPU:  0.00% @ +00.0°C 
@@ -34,6 +34,10 @@ interval=1
 command=~/.config/i3blocks/scripts/memory.sh
 label=MEM
 interval=30
+
+[MICROPHONE]
+command=~/.config/i3blocks/scripts/microphone.sh
+interval=1
 
 [SOUND]
 command=~/.config/i3blocks/scripts/volume.sh

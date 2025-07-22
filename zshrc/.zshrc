@@ -8,7 +8,7 @@ export PATH=$HOME/.local/bin:/$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$HOME/usr/local/bin:$PATH
 
-export TERM=alacritty
+# export TERM=alacritty
 export EDITOR=nvim
 export BROWSER=firefox
 
